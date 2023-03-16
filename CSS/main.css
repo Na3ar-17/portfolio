@@ -1,0 +1,224 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Serif+Pro:ital,wght@1,600&display=swap");
+
+/* 
+column-gap: 50px;
+
+*/
+.hidden {
+  overflow-y: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.title-1 {
+  font-size: 34px;
+  font-weight: 6000;
+}
+
+.button {
+  display: inline-block;
+  padding: 7px 22px;
+  background-color: #070707;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #323232;
+}
+
+.button:active {
+  background-color: #000;
+  position: relative;
+  top: 1px;
+}
+
+/* Header */
+.header {
+  padding-top: 46px;
+  background-color: #f1f1f1;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 76px;
+}
+
+.logo {
+  position: relative;
+  padding: 0 12px 3px 0;
+  font-weight: 700;
+  font-size: 32px;
+  color: #000;
+  line-height: 1;
+}
+
+.logo::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #fda300;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/*  Nav */
+
+.nav-list {
+  display: flex;
+  column-gap: 50px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.nav-button {
+  display: none;
+}
+
+.nav-link {
+  color: #000;
+}
+
+.nav-link.active {
+  color: #606060;
+}
+
+/*  header content*/
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+header-content {
+  max-width: 500px;
+  margin-top: 124px;
+}
+
+.header-heading {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+header-content p {
+  line-height: 2;
+}
+
+/* Service */
+
+.services {
+  padding: 90px 0;
+}
+
+.services-row {
+  display: flex;
+  column-gap: 30px;
+  flex-wrap: wrap;
+  row-gap: 60px;
+}
+
+.service-card {
+  flex: 1 1 0;
+  min-width: 315px;
+}
+
+.service-card-img {
+  margin-bottom: 30px;
+}
+
+.service-card-title {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.service-card p {
+  line-height: 2;
+}
+
+/* Portfolio */
+
+.portfolio {
+  background-color: #f1f1f1;
+  padding: 90px 0;
+}
+
+.portfolio-title {
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.project {
+  text-align: center;
+}
+
+.project + .project {
+  margin-top: 90px;
+}
+
+.project-img {
+  margin-bottom: 40px;
+}
+
+.project-title {
+  font-size: 18px;
+}
+
+.project-title a {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Footer */
+
+.contacts {
+  padding: 90px 0;
+  text-align: center;
+}
+
+.contacts-title {
+  margin-bottom: 40px;
+}
+
+.contacts-content {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.contacts-button {
+  margin-bottom: 80px;
+}
+
+.contacts-social {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  column-gap: 60px;
+  align-items: center;
+}
+
+.contacts-footer {
+  color: #828282;
+}
