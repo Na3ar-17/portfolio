@@ -1,0 +1,185 @@
+.bio {
+  max-width: 1250px;
+  margin: 120px auto;
+  padding: 0px 16px;
+
+  .header {
+    .neonText {
+      font-size: 59px;
+      font-family: var(--Sora);
+      font-weight: 800;
+      background: linear-gradient(145deg, #3bf686 10%, aqua 80%, #3bf686 10%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
+  }
+
+  .footer {
+    padding-top: 50px;
+    color: var(--fontColor);
+
+    .card {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1090px;
+      padding-top: 30px;
+
+      .cardContect {
+        display: flex;
+        align-items: center;
+
+        .borderImg {
+          position: relative;
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          margin-right: 35px;
+          border: double 4px transparent;
+          border-radius: 80px;
+          background-image: linear-gradient(#323232, #323232),
+            radial-gradient(
+              circle at top left,
+              rgb(11, 247, 247) 10%,
+              rgb(90, 185, 52) 90%
+            );
+          background-origin: border-box;
+          background-clip: content-box, border-box;
+
+          .avatar {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+          }
+        }
+        .cardText {
+          h3 {
+            font-size: 30px;
+            font-family: var(--Sora);
+            margin-bottom: 12px;
+            color: #fff;
+            font-weight: 500;
+          }
+
+          p {
+            max-width: 600px;
+            font-size: 18px;
+            font-family: var(--Inter);
+            line-height: 1.5rem;
+            color: #fff;
+            font-weight: 400;
+            letter-spacing: 0.025em;
+          }
+        }
+      }
+      .bioSocials {
+        padding-top: 10px;
+
+        p {
+          font-size: 30px;
+          font-family: var(--Sora);
+          font-weight: 500;
+        }
+
+        .icons {
+          display: flex;
+          column-gap: 12px;
+          padding-top: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .bio {
+    .header {
+      .neonText {
+        font-size: 54px;
+      }
+    }
+    .footer {
+      .card {
+        max-width: 940px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .bio {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+    .header {
+      .neonText {
+        font-size: 46px;
+        text-align: center;
+        padding-top: 40px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+    .footer {
+      padding-top: 0;
+      .card {
+        display: flex;
+        flex-direction: column;
+        .cardContect {
+          flex-direction: column;
+          text-align: center;
+          .borderImg {
+            margin: 0;
+          }
+          .cardText {
+            h3 {
+              padding: 15px 0px;
+            }
+          }
+        }
+        .bioSocials {
+          p {
+            display: none;
+          }
+          .icons {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .bio {
+    .header {
+      .neonText {
+        font-size: 33px;
+      }
+    }
+    .footer {
+      .card {
+        .cardContect {
+          .borderImg {
+            .avatar {
+            }
+          }
+          .cardText {
+            h3 {
+            }
+            p {
+            }
+          }
+        }
+        .bioSocials {
+          p {
+          }
+          .icons {
+          }
+        }
+      }
+    }
+  }
+}
