@@ -1,0 +1,87 @@
+.skills {
+  max-width: 1250px;
+  margin: 50px auto;
+  padding: 0px 16px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    .infoBlock {
+      .title {
+        font-weight: 600;
+        font-size: 30px;
+        font-family: var(--Sora);
+        color: var(--fontColor);
+
+        + p {
+          font-size: 18px;
+          font-family: var(--Inter);
+          color: #d6d6d6;
+          margin: 12px 0 0;
+          max-width: 456px;
+          letter-spacing: 0.025em;
+          line-height: 1.5rem;
+        }
+      }
+    }
+
+    .cards {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 70px;
+      gap: 35px;
+
+      .card {
+        background-color: #323443;
+        width: 275px;
+        height: 165px;
+        padding: 55px 16px 26px 18px;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+
+        .cardIcon {
+          position: absolute;
+          border: double 2px transparent;
+          border-radius: 80px;
+          background-image: linear-gradient(#323443, #323443),
+            radial-gradient(
+              circle at top left,
+              rgb(11, 247, 247) 10%,
+              rgb(90, 185, 52) 90%
+            );
+          background-origin: border-box;
+          background-clip: content-box, border-box;
+          width: 68px;
+          height: 68px;
+          top: 0%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+          }
+        }
+
+        .cardTitle {
+          font-family: var(--Sora);
+          font-size: 16px;
+          color: var(--fontColor);
+          font-weight: 700;
+
+          + p {
+            font-size: 14px;
+            font-family: var(--Inter);
+            color: #c9c9c9;
+            max-width: 200px;
+            margin: 0 auto;
+            padding-top: 4px;
+          }
+        }
+      }
+    }
+  }
+}
