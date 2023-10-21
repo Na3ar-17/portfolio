@@ -11,6 +11,20 @@ const NavBar: NextPage = () => {
         <p className={styles.logo}>Nazar</p>
       </div>
       <ul style={isMenuActive ? { right: "0" } : {}} className={styles.list}>
+        <div className={styles.area}>
+          <ul className={styles.circles}>
+            <li className={styles.noAnimation}></li>
+            <li className={styles.noAnimation}></li>
+            <li className={styles.noAnimation}></li>
+            <li className={styles.noAnimation}></li>
+            <li className={styles.noAnimation}></li>
+            <li className={styles.noAnimation}></li>
+            <li className={styles.noAnimation}></li>
+            <li className={styles.noAnimation}></li>
+            <li className={styles.noAnimation}></li>
+            <li className={styles.noAnimation}></li>
+          </ul>
+        </div>
         <div
           style={
             isMenuActive ? { right: "0", background: "rgba(0, 0, 0, 0.4)" } : {}

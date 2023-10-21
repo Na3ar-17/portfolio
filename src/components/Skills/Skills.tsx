@@ -10,14 +10,9 @@ const Skills: NextPage = () => {
           <p className={styles.title}>What I do</p>
           <p>
             Build and maintain websites,
-            <span
-              style={{ color: "#3bf686" }}
-              className={styles.frontendDeveloper}
-            >
-              frontend developer
-            </span>
-            FTW. I also have a mentorship called
-            <span style={{ fontWeight: "700" }} className={styles.neoneText}>
+            <span style={{ color: "#3bf686" }}>frontend developer {""}</span>
+            FTW. I also have a mentorship called {""}
+            <span style={{ fontWeight: "700" }} className={styles.neonText}>
               MOFON
             </span>
             . My motto is Beauty and function in equal measure as priority.

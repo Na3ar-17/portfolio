@@ -5,16 +5,22 @@
   .content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     .infoBlock {
+      margin-bottom: 100px;
+      text-align: center;
+
+      .neonText {
+        background: linear-gradient(220deg, #3bf686 0%, aqua 100%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+      }
       .title {
         font-weight: 600;
         font-size: 30px;
-        font-family: var(--Sora);
-        color: var(--fontColor);
-
+        color: #fff;
         + p {
           font-size: 18px;
-          font-family: var(--Inter);
           color: #d6d6d6;
           margin: 12px 0 0;
           max-width: 456px;
@@ -26,10 +32,9 @@
 
     .cards {
       display: flex;
-      justify-content: space-between;
-      padding-left: 70px;
-      gap: 35px;
-
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 45px;
       .card {
         background-color: #323443;
         width: 275px;
@@ -67,18 +72,77 @@
         }
 
         .cardTitle {
-          font-family: var(--Sora);
           font-size: 16px;
-          color: var(--fontColor);
+          color: #fff;
           font-weight: 700;
 
           + p {
             font-size: 14px;
-            font-family: var(--Inter);
             color: #c9c9c9;
             max-width: 200px;
             margin: 0 auto;
             padding-top: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .skills {
+    .content {
+      .cards {
+        gap: 65px;
+        .card {
+          width: 475px;
+          height: 180px;
+          .cardIcon {
+            width: 80px;
+            height: 80px;
+            .icon {
+              font-size: 37px;
+            }
+          }
+
+          .cardTitle {
+            font-size: 19px;
+            + p {
+              font-size: 17px;
+              max-width: 300px;
+              margin: 10px auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .skills {
+    .content {
+      .cards {
+        .card {
+          width: 355px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .skills {
+    .content {
+      .cards {
+        .card {
+          width: 290px;
+          .cardIcon {
+            width: 70px;
+            height: 70px;
+            .icon {
+              font-size: 30px;
+            }
           }
         }
       }
