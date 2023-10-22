@@ -23,7 +23,7 @@
           font-size: 18px;
           color: #d6d6d6;
           margin: 12px 0 0;
-          max-width: 456px;
+          max-width: 600px;
           letter-spacing: 0.025em;
           line-height: 1.5rem;
         }
@@ -37,7 +37,7 @@
       gap: 45px;
       .card {
         background-color: #323443;
-        width: 275px;
+        width: 324px;
         height: 165px;
         padding: 55px 16px 26px 18px;
         border-radius: 10px;
@@ -56,8 +56,8 @@
             );
           background-origin: border-box;
           background-clip: content-box, border-box;
-          width: 68px;
-          height: 68px;
+          width: 72px;
+          height: 72px;
           top: 0%;
           left: 50%;
           transform: translate(-50%, -50%);
@@ -72,16 +72,16 @@
         }
 
         .cardTitle {
-          font-size: 16px;
+          font-size: 18px;
           color: #fff;
           font-weight: 700;
 
           + p {
-            font-size: 14px;
+            font-size: 15px;
             color: #c9c9c9;
             max-width: 200px;
             margin: 0 auto;
-            padding-top: 4px;
+            padding-top: 8px;
           }
         }
       }
