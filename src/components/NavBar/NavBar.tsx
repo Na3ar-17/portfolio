@@ -2,11 +2,32 @@
 import { NextPage } from "next";
 import styles from "./NavBar.module.scss";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 const NavBar: NextPage = () => {
   const [isMenuActive, setMenuActive] = useState<boolean>(false);
+  const [isNavBarFixed, setNavBarFixed] = useState<boolean>(false);
+  const navRef = useRef<HTMLElement | null>(null);
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      const navBarOffset: number | undefined = navRef.current?.offsetTop;
+      const scrolled: number = window.scrollY;
+      console.log(`navBarOffset: ${navBarOffset} , scrolled: ${scrolled}`);
+
+      if (navBarOffset !== undefined) {
+        if (scrolled > navBarOffset) {
+          setNavBarFixed(true);
+        } else if (navBarOffset === 0 && scrolled === 0) {
+          setNavBarFixed(false);
+        }
+      }
+    });
+  }, []);
+
   return (
-    <nav className={styles.nav}>
+    <nav
+      ref={navRef}
+      className={`${styles.nav} ${isNavBarFixed ? styles.navBarFixed : ""}`}
+    >
       <div className={styles.logoBlock}>
         <p className={styles.logo}>Nazar</p>
       </div>
@@ -57,7 +78,6 @@ const NavBar: NextPage = () => {
           </Link>
         </li>
       </ul>
-
       <div
         onClick={() => setMenuActive(!isMenuActive)}
         className={`${styles.navIcon} ${isMenuActive && styles.open}`}

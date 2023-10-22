@@ -1,6 +1,6 @@
 .bio {
   max-width: 1250px;
-  margin: 120px auto;
+  margin: 100px auto 100px;
   padding: 0px 16px;
 
   .header {
@@ -112,7 +112,7 @@
   .bio {
     display: flex;
     flex-direction: column-reverse;
-    margin: 0;
+    margin-top: 140px;
     .header {
       .neonText {
         font-size: 46px;
