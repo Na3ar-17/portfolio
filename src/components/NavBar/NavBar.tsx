@@ -5,28 +5,35 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 const NavBar: NextPage = () => {
   const [isMenuActive, setMenuActive] = useState<boolean>(false);
-  const [isNavBarFixed, setNavBarFixed] = useState<boolean>(false);
+  const [isNavBarFixed, setNavBarFixed] = useState(false);
   const navRef = useRef<HTMLElement | null>(null);
-  useEffect(() => {
-    document.addEventListener("scroll", () => {
-      const navBarOffset: number | undefined = navRef.current?.offsetTop;
-      const scrolled: number = window.scrollY;
-      console.log(`navBarOffset: ${navBarOffset} , scrolled: ${scrolled}`);
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
-      if (navBarOffset !== undefined) {
+  useEffect(() => {
+    const handleScroll = () => {
+      const navBarOffset = navRef.current?.offsetTop || 0;
+      const scrolled = window.scrollY;
+
+      if (windowWidth >= 540) {
         if (scrolled > navBarOffset) {
           setNavBarFixed(true);
-        } else if (navBarOffset === 0 && scrolled === 0) {
+        } else {
           setNavBarFixed(false);
         }
       }
-    });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
     <nav
       ref={navRef}
-      className={`${styles.nav} ${isNavBarFixed ? styles.navBarFixed : ""}`}
+      className={`${styles.nav} ${isNavBarFixed ? styles.navBarFixed : ""} `}
     >
       <div className={styles.logoBlock}>
         <p className={styles.logo}>Nazar</p>
