@@ -7,12 +7,12 @@ const NavBar: NextPage = () => {
   const [isMenuActive, setMenuActive] = useState<boolean>(false);
   const [isNavBarFixed, setNavBarFixed] = useState(false);
   const navRef = useRef<HTMLElement | null>(null);
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
   useEffect(() => {
     const handleScroll = () => {
       const navBarOffset = navRef.current?.offsetTop || 0;
       const scrolled = window.scrollY;
+      const windowWidth = window.innerWidth;
 
       if (windowWidth >= 540) {
         if (scrolled > navBarOffset) {
