@@ -6,7 +6,8 @@ import react from "react";
 const NavBar: NextPage = () => {
   const [isMenuActive, setMenuActive] = react.useState<boolean>(false);
   const [isNavBarFixed, setNavBarFixed] = react.useState<boolean>(
-    localStorage.getItem("navbar-fixed") === "fixed"
+    typeof window !== "undefined" &&
+      localStorage.getItem("navbar-fixed") === "fixed"
   );
   const navRef = react.useRef<HTMLElement | null>(null);
 
