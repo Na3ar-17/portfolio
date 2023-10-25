@@ -5,7 +5,9 @@ import Link from "next/link";
 import react from "react";
 const NavBar: NextPage = () => {
   const [isMenuActive, setMenuActive] = react.useState<boolean>(false);
-  const [isNavBarFixed, setNavBarFixed] = react.useState(false);
+  const [isNavBarFixed, setNavBarFixed] = react.useState<boolean>(
+    localStorage.getItem("navbar-fixed") === "fixed"
+  );
   const navRef = react.useRef<HTMLElement | null>(null);
 
   react.useEffect(() => {
@@ -17,8 +19,10 @@ const NavBar: NextPage = () => {
       if (windowWidth >= 540) {
         if (scrolled > navBarOffset) {
           setNavBarFixed(true);
+          window.localStorage.setItem("navbar-fixed", "fixed");
         } else {
           setNavBarFixed(false);
+          window.localStorage.removeItem("navbar-fixed");
         }
       }
     };
