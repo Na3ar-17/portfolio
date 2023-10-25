@@ -2,13 +2,13 @@
 import { NextPage } from "next";
 import styles from "./NavBar.module.scss";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import react from "react";
 const NavBar: NextPage = () => {
-  const [isMenuActive, setMenuActive] = useState<boolean>(false);
-  const [isNavBarFixed, setNavBarFixed] = useState(false);
-  const navRef = useRef<HTMLElement | null>(null);
+  const [isMenuActive, setMenuActive] = react.useState<boolean>(false);
+  const [isNavBarFixed, setNavBarFixed] = react.useState(false);
+  const navRef = react.useRef<HTMLElement | null>(null);
 
-  useEffect(() => {
+  react.useEffect(() => {
     const handleScroll = () => {
       const navBarOffset = navRef.current?.offsetTop || 0;
       const scrolled = window.scrollY;

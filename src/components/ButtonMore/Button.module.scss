@@ -1,0 +1,36 @@
+.button {
+  button {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #323443;
+    color: #fff;
+    border: 1px solid #323443;
+    font-size: 14px;
+    font-family: var(--Sora);
+    font-weight: 600;
+    position: relative;
+    margin-top: 44px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: aqua;
+      transition: all 0.3s ease;
+    }
+
+    &:hover span {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: #323030;
+    }
+  }
+}
